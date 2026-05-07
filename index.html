@@ -135,7 +135,7 @@
               <td>✅</td>
               <td>✅</td>
               <td>✅</td>
-              <td>✅</td>
+              <td>Funciona sin problemas</td>
             </tr>
             <tr>
               <td>Edge (Versión 145.0.3800.70)</td>
@@ -144,7 +144,7 @@
               <td>✅</td>
               <td>✅</td>
               <td>✅</td>
-              <td>✅</td>
+              <td>Funciona sin problemas</td>
             </tr>
             <tr>
               <td>Chrome (Versión 145.0.7632.76)</td>
@@ -153,41 +153,62 @@
               <td>✅</td>
               <td>✅</td>
               <td>✅</td>
+              <td>Funciona sin problemas</td>
+            </tr>
+            <tr>
+              <td>Chrome (147.0.7727.137)</td>
+              <td>Móvil</td>
               <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Es un poco difícil de comprobar la barra de volumen al no poder verlo en el audio. Además, para probar en el móvil, fue necesario desplegar la página en un servidor</td>
             </tr>
             <tr>
-              <td>Chrome (version)</td>
+              <td>Safari</td>
               <td>Móvil</td>
-              <td>…</td>
-              <td>…</td>
-              <td>…</td>
-              <td>…</td>
-              <td>…</td>
-            </tr>
-            <tr>
-              <td>Safari (version)</td>
-              <td>Móvil</td>
-              <td>…</td>
-              <td>…</td>
-              <td>…</td>
-              <td>…</td>
-              <td>…</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>⚠️</td>
+              <td>
+                Tanto el botón de pantalla completa como la barra de volumen son incompatibles y no responde correctamente.
+                <br>
+                En cambio, el botón Play/Pause sí funciona correctamente.
+                <br>
+                Tanto el audio como el video fue posible que muestre la barra de volumen.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h3>Explicación técnica (obligatoria)</h3>
+      <h3>Explicación técnica</h3>
       <ol>
-        <li><strong>Problema / diferencia 1:</strong> describe lo ocurrido, causa probable y solución.</li>
-        <li><strong>Problema / diferencia 2:</strong> describe lo ocurrido, causa probable y solución.</li>
-        <li><strong>Problema / diferencia 3:</strong> describe lo ocurrido, causa probable y solución.</li>
+        <li>
+          <strong>Pantalla completa:</strong> 
+          En Safari móvil el botón de pantalla completa no funciona.
+          Es probable que iOS y WebKit tenga limitaciones con la Fullscreen API, por lo que no se comporta igual que en otros navegadores.
+          Por ello, se recomienda usar los controles nativos del propio navegador Safari
+        </li>
+        <li>
+          <strong>Barra de volumen:</strong> 
+          La barra de volumen no responde correctamente en Safari móvil.
+          Al parecer, iOS limita el control del volumen multimedia desde JavaScript por motivos de seguridad y experiencia de usuario.
+          Por ello, se recomienda usar los controles nativos del propio dispositivo.
+        </li>
+        <li>
+          <strong>Barra de volumen en multimedia:</strong> 
+          Las comprobaciones de los controles multimedias es más limitada en dispositivos móviles que en el ordenador, especialmente el audio.
+          Además, para realizar las pruebas en móvil fue necesario desplegar la página en un servidor mediante GitHub Pages.
+        </li>
       </ol>
 
       <h3>Conclusión</h3>
       <p>
-        Escribe aquí una conclusión breve: qué navegador/dispositivo tuvo más diferencias y qué has aprendido.
-      </p>
+        El navegador o dispositivo que presentó más diferencias fue con Safari en dispositivos móviles, principalmente por las limitaciones del sistema iOS.
+        En cambio, en navegadores con Android o Windows todas las funcionalidades funcionan correctamente.
+        Con esta práctica se entiendo que es importante realizar pruebas para detectar fallas y adaptar la aplicación web para diferentes entornos.
     </section>
 
     <!-- 5) Bibliografía -->
